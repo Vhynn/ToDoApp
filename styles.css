@@ -1,0 +1,71 @@
+html{
+    background: rgb(0,0,0);
+    background: linear-gradient(45deg, rgba(0,0,0,1) 22%, rgba(36,36,36,1) 73%, rgba(29,37,146,1) 100%);  
+    color: rgb(222, 222, 222);
+    height: 100vh;
+}
+h1{
+    text-align: center;
+    margin: 15px;
+    margin-top: 0px;
+}
+h2{
+    text-align: center;
+    margin: 15px;
+    margin-top: 0px;
+}
+.bottom-box{
+    text-align: left;
+}
+div{
+    border-bottom: 2px solid rgb(88, 88, 88);
+}
+.type1{
+    width: 50%;
+    border-right: 1px solid rgb(88, 88, 88);
+    border-left: 2px solid rgb(88, 88, 88);
+}
+.type1-2{
+    width: 50%;
+    border-right: 2px solid rgb(88, 88, 88);
+    border-left: 1px solid rgb(88, 88, 88);
+}
+.type2{
+    width: 33.3333333333%;
+}
+.hor{
+    height: 75%;
+    display: flex;
+    border: initial;
+}
+.hor-2{
+    display: flex;
+    border: initial;
+    border-right: 2px solid rgb(88, 88, 88);
+    border-left: 2px solid rgb(88, 88, 88);
+}
+button{
+    align-self: flex-end;
+    background-color: rgb(88, 88, 88);
+    color: rgb(186, 186, 186);
+    border-color: rgb(38, 45, 76);
+}
+.full-border{
+    border:2px solid rgb(88, 88, 88);
+}
+.topless-border{
+    border:2px solid rgb(88, 88, 88);
+    border-top: 0px;
+}
+.no-border{
+    border:0px;
+}
+.go-right{
+    border: 0px;
+    text-align: right;
+    border: 0;
+}
+.whole-screen{
+    height: 90vh;
+    border: 0ch;
+}
