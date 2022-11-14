@@ -32,6 +32,15 @@ button:hover{
 button:active{
     background-color: rgb(57, 51, 143);
 }
+.scroll{
+    overflow: scroll;
+    height: 84%;
+    border: 0px;
+}
+.title{
+    height: 15%;
+    max-height: .75in;
+}
 .bottom-box{
     text-align: left;
 }
@@ -45,7 +54,6 @@ button:active{
     width: 50%;
     border-right: 2px solid rgb(88, 88, 88);
     border-left: 1px solid rgb(88, 88, 88);
-    overflow: scroll;
 }
 .type2{
     width: 33.3333333333%;
@@ -94,3 +102,16 @@ button:active{
         height: initial;
     }
 }
+@media screen and (max-height: 440px){
+    .type1{
+        width: initial;
+        border-right: 2px solid rgb(88, 88, 88);
+    }
+    .type1-2{
+        width: initial;
+        border-left: 2px solid rgb(88,88,88);
+    }
+    .hor{
+        display: block;
+        height: initial;
+    }
