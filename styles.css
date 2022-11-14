@@ -1,8 +1,10 @@
+body{
+    font-family: 'Raleway', sans-serif;
+}
 html{
-    background: rgb(0,0,0);
-    background: linear-gradient(45deg, rgba(0,0,0,1) 22%, rgba(36,36,36,1) 73%, rgba(29,37,146,1) 100%);  
+    background: rgb(34, 34, 34); 
     color: rgb(222, 222, 222);
-    height: 100vh;
+    min-height: 100vh;
 }
 h1{
     text-align: center;
@@ -14,21 +16,36 @@ h2{
     margin: 15px;
     margin-top: 0px;
 }
-.bottom-box{
-    text-align: left;
-}
 div{
     border-bottom: 2px solid rgb(88, 88, 88);
+}
+button{
+    align-self: flex-end;
+    background-color: rgb(88, 88, 88);
+    color: rgb(186, 186, 186);
+    border-color: rgb(38, 45, 76);
+    border-radius: 10px;
+}
+button:hover{
+    background-color: rgb(69, 61, 178);
+}
+button:active{
+    background-color: rgb(57, 51, 143);
+}
+.bottom-box{
+    text-align: left;
 }
 .type1{
     width: 50%;
     border-right: 1px solid rgb(88, 88, 88);
     border-left: 2px solid rgb(88, 88, 88);
+    overflow: scroll;
 }
 .type1-2{
     width: 50%;
     border-right: 2px solid rgb(88, 88, 88);
     border-left: 1px solid rgb(88, 88, 88);
+    overflow: scroll;
 }
 .type2{
     width: 33.3333333333%;
@@ -43,12 +60,6 @@ div{
     border: initial;
     border-right: 2px solid rgb(88, 88, 88);
     border-left: 2px solid rgb(88, 88, 88);
-}
-button{
-    align-self: flex-end;
-    background-color: rgb(88, 88, 88);
-    color: rgb(186, 186, 186);
-    border-color: rgb(38, 45, 76);
 }
 .full-border{
     border:2px solid rgb(88, 88, 88);
@@ -68,4 +79,18 @@ button{
 .whole-screen{
     height: 90vh;
     border: 0ch;
+}
+@media screen and (max-width: 600px){
+    .type1{
+        width: initial;
+        border-right: 2px solid rgb(88, 88, 88);
+    }
+    .type1-2{
+        width: initial;
+        border-left: 2px solid rgb(88,88,88);
+    }
+    .hor{
+        display: block;
+        height: initial;
+    }
 }
