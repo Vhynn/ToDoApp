@@ -1,1 +1,3 @@
-# ToDoApp
+# To Do App
+
+A List to keep track of various things that need to be done. There is a section for things that need to get done soon/in the same day and a section for things that are a bit less urgent. Additionally there is a section for things that need to be continuously worked at or things to just be mindful of. This whole project was made as a web page mostly just so I could gain more experience using web development tools.

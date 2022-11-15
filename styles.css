@@ -1,0 +1,118 @@
+body{
+    font-family: 'Raleway', sans-serif;
+}
+html{
+    background: rgb(34, 34, 34); 
+    color: rgb(222, 222, 222);
+    min-height: 100vh;
+}
+h1{
+    text-align: center;
+    margin: 15px;
+    margin-top: 0px;
+}
+h2{
+    text-align: center;
+    margin: 15px;
+    margin-top: 0px;
+}
+div{
+    border-bottom: 2px solid rgb(88, 88, 88);
+}
+button{
+    align-self: flex-end;
+    background-color: rgb(88, 88, 88);
+    color: rgb(186, 186, 186);
+    border-color: rgb(38, 45, 76);
+    border-radius: 10px;
+}
+button:hover{
+    background-color: rgb(69, 61, 178);
+}
+button:active{
+    background-color: rgb(57, 51, 143);
+}
+.scroll{
+    overflow: scroll;
+    height: 84%;
+    border: 0px;
+}
+.title{
+    height: 15%;
+    max-height: .75in;
+}
+.bottom-box{
+    text-align: left;
+}
+.type1{
+    width: 50%;
+    border-right: 1px solid rgb(88, 88, 88);
+    border-left: 2px solid rgb(88, 88, 88);
+    overflow: scroll;
+}
+.type1-2{
+    width: 50%;
+    border-right: 2px solid rgb(88, 88, 88);
+    border-left: 1px solid rgb(88, 88, 88);
+}
+.type2{
+    width: 33.3333333333%;
+}
+.hor{
+    height: 75%;
+    display: flex;
+    border: initial;
+}
+.hor-2{
+    display: flex;
+    border: initial;
+    border-right: 2px solid rgb(88, 88, 88);
+    border-left: 2px solid rgb(88, 88, 88);
+}
+.full-border{
+    border:2px solid rgb(88, 88, 88);
+}
+.topless-border{
+    border:2px solid rgb(88, 88, 88);
+    border-top: 0px;
+}
+.no-border{
+    border:0px;
+}
+.go-right{
+    border: 0px;
+    text-align: right;
+    border: 0;
+}
+.whole-screen{
+    height: 90vh;
+    border: 0ch;
+}
+@media screen and (max-width: 600px){
+    .type1{
+        width: initial;
+        border-right: 2px solid rgb(88, 88, 88);
+    }
+    .type1-2{
+        width: initial;
+        border-left: 2px solid rgb(88,88,88);
+    }
+    .hor{
+        display: block;
+        height: initial;
+    }
+}
+@media screen and (max-height: 440px){
+    .type1{
+        width: initial;
+        border-right: 2px solid rgb(88, 88, 88);
+    }
+    .type1-2{
+        width: initial;
+        border-left: 2px solid rgb(88,88,88);
+    }
+    .hor{
+        display: block;
+        height: initial;
+    }
+}
