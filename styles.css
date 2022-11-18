@@ -32,6 +32,17 @@ button:hover{
 button:active{
     background-color: rgb(57, 51, 143);
 }
+input{
+    background-color: rgb(34, 34, 34);
+    border: 0px;
+    color: rgb(222, 222, 222);
+    margin-right: 5px;
+}
+input:focus{
+    border: 0px;
+    outline: none;
+    background-color: rgb(67, 67, 67);
+}
 .scroll{
     overflow: scroll;
     height: 84%;
