@@ -68,6 +68,7 @@ button:active{
     border: initial;
     border-right: 2px solid rgb(88, 88, 88);
     border-left: 2px solid rgb(88, 88, 88);
+    min-height: 12vh;
 }
 .full-border{
     border:2px solid rgb(88, 88, 88);
