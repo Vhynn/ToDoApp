@@ -48,82 +48,81 @@ input:focus{
     height: 84%;
     border: 0px;
 }
-.title{
+.list--title{
     height: 15%;
     max-height: .75in;
 }
-.bottom-box{
+.list__bottom--title{
     text-align: left;
 }
-.type1{
+.list__horazontal--left{
     width: 50%;
     border-right: 1px solid rgb(88, 88, 88);
     border-left: 2px solid rgb(88, 88, 88);
-    overflow: scroll;
 }
-.type1-2{
+.list__horazontal--right{
     width: 50%;
     border-right: 2px solid rgb(88, 88, 88);
     border-left: 1px solid rgb(88, 88, 88);
 }
-.type2{
+.list__horazontalType2--list{
     width: 33.3333333333%;
 }
-.hor{
+.list__horazontal{
     height: 75%;
     display: flex;
     border: initial;
 }
-.hor-2{
+.list__horazontalType2{
     display: flex;
     border: initial;
     border-right: 2px solid rgb(88, 88, 88);
     border-left: 2px solid rgb(88, 88, 88);
     min-height: 12vh;
 }
-.full-border{
+.fullBorder{
     border:2px solid rgb(88, 88, 88);
 }
-.topless-border{
+.list__bottom--titleBox{
     border:2px solid rgb(88, 88, 88);
     border-top: 0px;
 }
-.no-border{
+.list__bottom--noBorder{
     border:0px;
 }
-.go-right{
+.list__inputs{
     border: 0px;
     text-align: right;
     border: 0;
 }
-.whole-screen{
+.wholeScreen{
     height: 90vh;
     border: 0ch;
 }
 @media screen and (max-width: 600px){
-    .type1{
+    .list__horazontal--left{
         width: initial;
         border-right: 2px solid rgb(88, 88, 88);
     }
-    .type1-2{
+    .list__horazontal--right{
         width: initial;
         border-left: 2px solid rgb(88,88,88);
     }
-    .hor{
+    .List__horazontal{
         display: block;
         height: initial;
     }
 }
 @media screen and (max-height: 440px){
-    .type1{
+    .list__horazontal--left{
         width: initial;
         border-right: 2px solid rgb(88, 88, 88);
     }
-    .type1-2{
+    .list__horazontal--right{
         width: initial;
         border-left: 2px solid rgb(88,88,88);
     }
-    .hor{
+    .List__horazontal{
         display: block;
         height: initial;
     }
