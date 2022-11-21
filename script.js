@@ -1,7 +1,10 @@
+//Set the buttons as const just to keep things a bit cleaner
 const dailyButton = document.querySelector(".daily__button");
 const generalButton = document.querySelector(".general__button");
 const constantButton = document.querySelector(".constant__button");
 
+
+//Event listeners for clicking on the three "add item" buttons or pressing the enter key when the three text boxes are in focus
 dailyButton.addEventListener("click", function () {
     addToList(".daily__textBox", ".daily__list");
 });
@@ -31,6 +34,8 @@ document.querySelector(".constant__textBox").addEventListener("keydown", functio
     }
 });
 
+
+//The main function to add an item to a list. It checks to make sure that the text box has content before adding to the list to avoid empty items
 function addToList(textNumber, listType){
     let textBox = document.querySelector(textNumber);
     if (textBox.value === ""){
@@ -45,6 +50,7 @@ function addToList(textNumber, listType){
     }
 }
 
+//Function to decide which of the three lists to add an item to when using the constant tasks button
 function chooseConstantList(){
     const l1 = document.querySelector(".constant__list1");
     const l2 = document.querySelector(".constant__list2");
