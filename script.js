@@ -46,7 +46,7 @@ function addToList(textNumber, listType){
         newLi.appendChild(document.createTextNode(textBox.value));
         document.querySelector(listType).appendChild(newLi);
         
-        //adds an event listener to change the text to strikethough when clicked
+        //adds event listener to change the text to strikethough when clicked
         newLi.addEventListener('click', function(){
             crossOut(newLi);
         });
