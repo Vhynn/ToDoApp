@@ -45,6 +45,11 @@ function addToList(textNumber, listType){
         let newLi = document.createElement('li');
         newLi.appendChild(document.createTextNode(textBox.value));
         document.querySelector(listType).appendChild(newLi);
+        
+        //adds an event listener to change the text to strikethough when clicked
+        newLi.addEventListener('click', function(){
+            crossOut(newLi);
+        });
 
         textBox.value = "";
     }
@@ -64,5 +69,16 @@ function chooseConstantList(){
     }
     else{
         return ".constant__list3";
+    }
+}
+
+
+//Function to make a <li> strikethrough text if not already and to make it plaintext if it is already struckthrough
+function crossOut(listToCross){
+    if (listToCross.innerHTML[0] !== '<'){
+        listToCross.innerHTML = "<s>" + listToCross.innerHTML + "</s>";
+    }
+    else{
+        listToCross.innerHTML = listToCross.innerHTML.slice(3, (listToCross.innerHTML.length - 4));
     }
 }

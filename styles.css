@@ -43,6 +43,9 @@ input:focus{
     outline: none;
     background-color: rgb(67, 67, 67);
 }
+li{
+    cursor: pointer;
+}
 .scroll{
     overflow: scroll;
     height: 84%;
