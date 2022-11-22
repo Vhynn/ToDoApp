@@ -3,51 +3,51 @@ const dailyButton = document.querySelector(".daily__button");
 const generalButton = document.querySelector(".general__button");
 const constantButton = document.querySelector(".constant__button");
 
+const dailyTextBox = document.querySelector(".daily__textBox");
+const generalTextBox = document.querySelector(".general__textBox");
+const constantTextBox = document.querySelector(".constant__textBox");
 
 //Event listeners for clicking on the three "add item" buttons or pressing the enter key when the three text boxes are in focus
-dailyButton.addEventListener("click", function () {
-    addToList(".daily__textBox", ".daily__list");
-});
-document.querySelector(".daily__textBox").addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
-        addToList(".daily__textBox", ".daily__list");
-    }
-});
+addClickListener(dailyButton, dailyTextBox, ".daily__list");
+addEnterKeyListener(dailyTextBox, ".daily__list");
 
-generalButton.addEventListener("click", function () {
-    addToList(".general__textBox", ".general__list");
-});
-document.querySelector(".general__textBox").addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
-        addToList(".general__textBox", ".general__list");
-    }
-});
+addClickListener(generalButton, generalTextBox, ".general__list");
+addEnterKeyListener(generalTextBox, ".general__list");
 
-constantButton.addEventListener("click", function () {
-    let listType = chooseConstantList();
-    addToList(".constant__textBox", listType);
-});
-document.querySelector(".constant__textBox").addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
-        let listType = chooseConstantList();
-        addToList(".constant__textBox", listType);
-    }
-});
+addClickListener(constantButton, constantTextBox, "");
+addEnterKeyListener(constantTextBox, "");
 
+function addClickListener(button, textBox, list){
+    button.addEventListener("click", () => {
+        if (textBox === document.querySelector(".constant__textBox")){
+            list = chooseConstantList();
+        }
+        addToList(textBox, list);
+    });
+}
+function addEnterKeyListener(textBox, list){
+    textBox.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            if (textBox === document.querySelector(".constant__textBox")){
+                list = chooseConstantList();
+            }
+            addToList(textBox, list);
+        }
+    });
+}
 
 //The main function to add an item to a list. It checks to make sure that the text box has content before adding to the list to avoid empty items
-function addToList(textNumber, listType){
-    let textBox = document.querySelector(textNumber);
+function addToList(textBox, list){
     if (textBox.value === ""){
         textBox.focus();
     }
     else{
         let newLi = document.createElement('li');
         newLi.appendChild(document.createTextNode(textBox.value));
-        document.querySelector(listType).appendChild(newLi);
+        document.querySelector(list).appendChild(newLi);
         
         //adds event listener to change the text to strikethough when clicked
-        newLi.addEventListener('click', function(){
+        newLi.addEventListener('click', () => {
             crossOut(newLi);
         });
 
@@ -71,7 +71,6 @@ function chooseConstantList(){
         return ".constant__list3";
     }
 }
-
 
 //Function to make a <li> strikethrough text if not already and to make it plaintext if it is already struckthrough
 function crossOut(listToCross){
