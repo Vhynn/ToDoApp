@@ -74,10 +74,10 @@ function chooseConstantList(){
 
 //Function to make a <li> strikethrough text if not already and to make it plaintext if it is already struckthrough
 function crossOut(listToCross){
-    if (listToCross.innerHTML[0] !== '<'){
-        listToCross.innerHTML = "<s>" + listToCross.innerHTML + "</s>";
+    if (listToCross.innerHTML.startsWith("<s>") && listToCross.innerHTML.endsWith("</s>")){
+        listToCross.innerHTML = listToCross.innerHTML.slice(3, (listToCross.innerHTML.length - 4));
     }
     else{
-        listToCross.innerHTML = listToCross.innerHTML.slice(3, (listToCross.innerHTML.length - 4));
+        listToCross.innerHTML = "<s>" + listToCross.innerHTML + "</s>";
     }
 }
