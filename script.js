@@ -7,6 +7,9 @@ const dailyTextBox = document.querySelector(".daily__textBox");
 const generalTextBox = document.querySelector(".general__textBox");
 const constantTextBox = document.querySelector(".constant__textBox");
 
+//Event listener for the clear items button
+document.querySelector(".clearItems__button").addEventListener("click", clearItems);
+
 //Event listeners for clicking on the three "add item" buttons or pressing the enter key when the three text boxes are in focus
 addClickListener(dailyButton, dailyTextBox, ".daily__list");
 addEnterKeyListener(dailyTextBox, ".daily__list");
@@ -60,5 +63,15 @@ function crossOut(listToCross){
     }
     else{
         listToCross.innerHTML = "<s>" + listToCross.innerHTML + "</s>";
+    }
+}
+
+//function to remove li elements that have been struckthrough
+function clearItems(){
+    const listElements = document.querySelectorAll("li");
+    for (list of listElements){
+        if (list.innerHTML.startsWith("<s>") && list.innerHTML.endsWith("</s>")){
+            list.remove();
+        }
     }
 }
