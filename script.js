@@ -14,23 +14,17 @@ addEnterKeyListener(dailyTextBox, ".daily__list");
 addClickListener(generalButton, generalTextBox, ".general__list");
 addEnterKeyListener(generalTextBox, ".general__list");
 
-addClickListener(constantButton, constantTextBox, "");
-addEnterKeyListener(constantTextBox, "");
+addClickListener(constantButton, constantTextBox, ".constant__list");
+addEnterKeyListener(constantTextBox, ".constant__list");
 
 function addClickListener(button, textBox, list){
     button.addEventListener("click", () => {
-        if (textBox === document.querySelector(".constant__textBox")){
-            list = chooseConstantList();
-        }
         addToList(textBox, list);
     });
 }
 function addEnterKeyListener(textBox, list){
     textBox.addEventListener("keydown", (e) => {
         if (e.key === "Enter") {
-            if (textBox === document.querySelector(".constant__textBox")){
-                list = chooseConstantList();
-            }
             addToList(textBox, list);
         }
     });
@@ -42,7 +36,11 @@ function addToList(textBox, list){
         textBox.focus();
     }
     else{
-        let newLi = document.createElement('li');
+        let newLi = document.createElement("li");
+        //bit of code to add a class to constant list items
+        if (list === ".constant__list"){
+            newLi.classList.add("constant__list--item")
+        }
         newLi.appendChild(document.createTextNode(textBox.value));
         document.querySelector(list).appendChild(newLi);
         
@@ -52,23 +50,6 @@ function addToList(textBox, list){
         });
 
         textBox.value = "";
-    }
-}
-
-//Function to decide which of the three lists to add an item to when using the constant tasks button
-function chooseConstantList(){
-    const l1 = document.querySelector(".constant__list1");
-    const l2 = document.querySelector(".constant__list2");
-    const l3 = document.querySelector(".constant__list3");
-
-    if (l1.childElementCount === l3.childElementCount){
-        return ".constant__list1";
-    }
-    else if (l1.childElementCount > l2.childElementCount){
-        return ".constant__list2";
-    }
-    else{
-        return ".constant__list3";
     }
 }
 
